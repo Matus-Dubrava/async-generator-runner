@@ -12,9 +12,9 @@ function run(fn) {
   const iteration = iterator.next();
 
   function iterate(iteration) {
-   const promise = Promise.resolve(iteration.value);
-   if (iteration.done) { return iteration.value; }
-   promise.then((v) => { iterate(iterator.next(v)); });
+    const promise = Promise.resolve(iteration.value);
+    if (iteration.done) { return iteration.value; }
+    promise.then((v) => { iterate(iterator.next(v)); });
   }
 
   iterate(iteration);
