@@ -1,6 +1,6 @@
 function *factorial(n) {
   if (typeof n !== 'number' || parseInt(n) !== n || n < 0) {
-    throw new Error('Invalued input. Expected an Integer value.');
+    throw new Error('Invalid input. Expected an Integer value.');
   }
 
   let result = 1;
